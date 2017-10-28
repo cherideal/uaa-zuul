@@ -1,0 +1,489 @@
+{
+	"variables": [],
+	"info": {
+		"name": "springcloud-sso",
+		"_postman_id": "605f806f-faee-e1eb-3c67-0906ca571b6c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth2-whf",
+			"description": "用户认证",
+			"item": [
+				{
+					"name": "01密码模式-admin",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "android",
+								"password": "android",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "http://localhost:8080/uaa/oauth/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YW5kcm9pZDphbmRyb2lk",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"description": "登录方式",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"description": "用户名",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"description": "密码",
+									"type": "text"
+								}
+							]
+						},
+						"description": "01密码模式-admin"
+					},
+					"response": []
+				},
+				{
+					"name": "01密码模式-wyf",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "android",
+								"password": "android",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": "http://localhost:8080/uaa/oauth/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YW5kcm9pZDphbmRyb2lk",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"description": "登录方式",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "wyf",
+									"description": "用户名",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "wyf",
+									"description": "密码",
+									"type": "text"
+								}
+							]
+						},
+						"description": "01密码模式-wyf"
+					},
+					"response": []
+				},
+				{
+					"name": "02获取用户信息-admin",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "android",
+								"password": "android",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/uaa/user?access_token=fd49fe46-a609-4215-9802-d9c984df5d35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"uaa",
+								"user"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "fd49fe46-a609-4215-9802-d9c984df5d35",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YW5kcm9pZDphbmRyb2lk",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "paasword",
+									"description": "密码模式",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"description": "用户名",
+									"type": "text"
+								},
+								{
+									"key": "paasword",
+									"value": "admin",
+									"description": "密码",
+									"type": "text"
+								}
+							]
+						},
+						"description": "密码默认获取token"
+					},
+					"response": []
+				},
+				{
+					"name": "02获取用户信息-wyf",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "postman",
+								"password": "password",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/uaa/user?access_token=98c4f08f-98bc-4bed-81e8-64129913559c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"uaa",
+								"user"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "98c4f08f-98bc-4bed-81e8-64129913559c",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic cG9zdG1hbjpwYXNzd29yZA==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "paasword",
+									"description": "密码模式",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"description": "用户名",
+									"type": "text"
+								},
+								{
+									"key": "paasword",
+									"value": "admin",
+									"description": "密码",
+									"type": "text"
+								}
+							]
+						},
+						"description": "02获取用户信息-wyf"
+					},
+					"response": []
+				},
+				{
+					"name": "03获取订单信息-admin",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "postman",
+								"password": "password",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/order/demo?access_token=fd49fe46-a609-4215-9802-d9c984df5d35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"demo"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "fd49fe46-a609-4215-9802-d9c984df5d35",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic cG9zdG1hbjpwYXNzd29yZA==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "paasword",
+									"description": "密码模式",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"description": "用户名",
+									"type": "text"
+								},
+								{
+									"key": "paasword",
+									"value": "admin",
+									"description": "密码",
+									"type": "text"
+								}
+							]
+						},
+						"description": "03获取订单信息-admin"
+					},
+					"response": []
+				},
+				{
+					"name": "03获取订单信息-wyf",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "postman",
+								"password": "password",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/order/demo?access_token=98c4f08f-98bc-4bed-81e8-64129913559c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"demo"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "98c4f08f-98bc-4bed-81e8-64129913559c",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic cG9zdG1hbjpwYXNzd29yZA==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "paasword",
+									"description": "密码模式",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"description": "用户名",
+									"type": "text"
+								},
+								{
+									"key": "paasword",
+									"value": "admin",
+									"description": "密码",
+									"type": "text"
+								}
+							]
+						},
+						"description": "03获取订单信息-wyf"
+					},
+					"response": []
+				},
+				{
+					"name": "07退出登录",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "android",
+								"password": "android",
+								"saveHelperData": true,
+								"showPassword": false
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/uaa/oauth/token?access_token=98c4f08f-98bc-4bed-81e8-64129913559c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"uaa",
+								"oauth",
+								"token"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "98c4f08f-98bc-4bed-81e8-64129913559c",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YW5kcm9pZDphbmRyb2lk",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "paasword",
+									"description": "密码模式",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"description": "用户名",
+									"type": "text"
+								},
+								{
+									"key": "paasword",
+									"value": "admin",
+									"description": "密码",
+									"type": "text"
+								}
+							]
+						},
+						"description": "07退出登录"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

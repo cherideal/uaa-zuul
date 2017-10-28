@@ -451,3 +451,6 @@ public class RevokeTokenEndpoint {
 
 #### 6.2 注销请求方式
 ![](https://raw.githubusercontent.com/wiselyman/uaa-zuul/master/images/logout.png)
+
+### postman 测试数据
+springcloud-sso.postman_collection.json

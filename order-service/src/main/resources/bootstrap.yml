@@ -4,7 +4,10 @@ spring:
   application:
     name: order-service
   redis:
-    host: 192.168.1.140
+      host: 192.168.241.21
+      password: 123456
+      port: 6379
+      timeout: 0
 #  cloud:
 #    config:
 #      uri: http://${config.host:192.168.1.140}:${config.port:8888}

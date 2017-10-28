@@ -29,8 +29,6 @@ import javax.servlet.http.HttpServletResponse;
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-
-
     @Bean
     public UserDetailsService userDetailsService(){
         return new DomainUserDetailsService();
