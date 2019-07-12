@@ -4,7 +4,7 @@ spring:
   application:
     name: order-service
   redis:
-      host: 192.168.241.21
+      host: 172.16.22.227
       password: 123456
       port: 6379
       timeout: 0

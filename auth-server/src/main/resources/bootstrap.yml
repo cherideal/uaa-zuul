@@ -12,12 +12,12 @@ spring:
       ddl-auto: update
   datasource:
     platform: template1
-    url: jdbc:postgresql://192.168.241.21:5432/auth
+    url: jdbc:postgresql://172.16.22.227:5432/auth
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
   redis:
-    host: 192.168.241.21
+    host: 172.16.22.227
     password: 123456
     port: 6379
     timeout: 0
